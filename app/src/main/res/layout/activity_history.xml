@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".History.HistoryActivity">
+
+    <!-- History calculations -->
+    <ListView
+        android:id="@+id/history__list_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <!-- Clear history button -->
+    <Button
+        android:text="@string/clear_history_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:onClick="clearHistory"/>
+
+</RelativeLayout>
+

@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:grid="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="100"
+    tools:context=".MainActivity">
+    
+    <!-- Input and result fields -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="50">
+
+        <TextView
+            android:id="@+id/auxiliary_field"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/expression_field"
+            android:gravity="center|end"
+            android:padding="16dp"
+            android:singleLine="true"
+            android:textAppearance="@style/AuxiliaryFieldTextStyle" />
+
+        <TextView
+            android:id="@+id/expression_field"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="5dp"
+            android:gravity="bottom|end"
+            android:text="@string/zero"
+            android:textAppearance="@style/ExpressionFieldTextStyle"
+            android:padding="16dp"
+            android:singleLine="true" />
+
+    </RelativeLayout>
+
+    <!-- Buttons -->
+    <android.support.v7.widget.GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="50"
+        android:background="@color/calcButtonsBackground"
+        grid:columnCount="4"
+        grid:rowCount="5">
+
+        <!-- Row 1 -->
+        <Button
+            android:text="@string/backspace"
+            grid:layout_row="0"
+            grid:layout_column="0"
+            grid:layout_rowWeight="1"
+            grid:layout_columnWeight="1"
+            android:onClick="backspace"
+            style="@style/CalculatorButtonStyle" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="0dp"
+            grid:layout_row="0"
+            grid:layout_column="1"
+            grid:layout_rowWeight="1"
+            grid:layout_columnWeight="1">
+
+            <Button
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="@string/bracket_start"
+                android:onClick="appendOpenningBracket"
+                style="@style/CalculatorButtonStyle"/>
+
+            <Button
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="@string/bracket_end"
+                android:onClick="appendClosingBracket"
+                style="@style/CalculatorButtonStyle"/>
+
+        </LinearLayout>
+
+        <Button
+            android:text="@string/caret"
+            grid:layout_row="0"
+            grid:layout_column="2"
+            grid:layout_rowWeight="1"
+            grid:layout_columnWeight="1"
+            android:onClick="appendCaret"
+            style="@style/CalculatorButtonStyle"/>
+
+        <Button
+            android:text="@string/divide"
+            grid:layout_row="0"
+            grid:layout_column="3"
+            grid:layout_rowWeight="1"
+            grid:layout_columnWeight="1"
+            android:onClick="appendDivison"
+            style="@style/CalculatorButtonStyle"/>
+
+        <!-- Row 2 -->
+        <Button
+            android:text="@string/seven"
+            grid:layout_row="1"
+            grid:layout_column="0"
+            grid:layout_rowWeight="1"
+            grid:layout_columnWeight="1"
+            android:onClick="append7"
+            style="@style/CalculatorButtonStyle"/>
+
+        <Button
+            android:text="@string/eight"
+            grid:layout_row="1"
+            grid:layout_column="1"
+            grid:layout_rowWeight="1"
+            grid:layout_columnWeight="1"
+            android:onClick="append8"
+            style="@style/CalculatorButtonStyle"/>
+
+        <Button
+            android:text="@string/nine"
+            grid:layout_row="1"
+            grid:layout_column="2"
+            grid:layout_rowWeight="1"
+            grid:layout_columnWeight="1"
+            android:onClick="append9"
+            style="@style/CalculatorButtonStyle"/>
+
+        <Button
+            android:text="@string/multiply"
+            grid:layout_row="1"
+            grid:layout_column="3"
+            grid:layout_rowWeight="1"
+            grid:layout_columnWeight="1"
+            android:onClick="appendMultiplication"
+            style="@style/CalculatorButtonStyle"/>
+
+        <!-- Row 3 -->
+        <Button
+            android:text="@string/four"
+            grid:layout_row="2"
+            grid:layout_column="0"
+            grid:layout_rowWeight="1"
+            grid:layout_columnWeight="1"
+            android:onClick="append4"
+            style="@style/CalculatorButtonStyle"/>
+
+        <Button
+            android:text="@string/five"
+            grid:layout_row="2"
+            grid:layout_column="1"
+            grid:layout_rowWeight="1"
+            grid:layout_columnWeight="1"
+            android:onClick="append5"
+            style="@style/CalculatorButtonStyle"/>
+
+        <Button
+            android:text="@string/six"
+            grid:layout_row="2"
+            grid:layout_column="2"
+            grid:layout_rowWeight="1"
+            grid:layout_columnWeight="1"
+            android:onClick="append6"
+            style="@style/CalculatorButtonStyle"/>
+
+        <Button
+            android:text="@string/minus"
+            grid:layout_row="2"
+            grid:layout_column="3"
+            grid:layout_rowWeight="1"
+            grid:layout_columnWeight="1"
+            android:onClick="appendMinus"
+            style="@style/CalculatorButtonStyle"/>
+
+        <!-- Row 4 -->
+        <Button
+            android:text="@string/one"
+            grid:layout_row="3"
+            grid:layout_column="0"
+            grid:layout_rowWeight="1"
+            grid:layout_columnWeight="1"
+            android:onClick="append1"
+            style="@style/CalculatorButtonStyle"/>
+
+        <Button
+            android:text="@string/two"
+            grid:layout_row="3"
+            grid:layout_column="1"
+            grid:layout_rowWeight="1"
+            grid:layout_columnWeight="1"
+            android:onClick="append2"
+            style="@style/CalculatorButtonStyle"/>
+
+        <Button
+            android:text="@string/three"
+            grid:layout_row="3"
+            grid:layout_column="2"
+            grid:layout_rowWeight="1"
+            grid:layout_columnWeight="1"
+            android:onClick="append3"
+            style="@style/CalculatorButtonStyle"/>
+
+        <Button
+            android:text="@string/plus"
+            grid:layout_row="3"
+            grid:layout_column="3"
+            grid:layout_rowWeight="1"
+            grid:layout_columnWeight="1"
+            android:onClick="appendPlus"
+            style="@style/CalculatorButtonStyle"/>
+
+        <!-- Row 5 -->
+        <Button
+            android:text="@string/c"
+            android:textColor="@android:color/holo_orange_light"
+            android:textStyle="bold"
+            grid:layout_row="4"
+            grid:layout_column="0"
+            grid:layout_rowWeight="1"
+            grid:layout_columnWeight="1"
+            android:onClick="clearExpression"
+            style="@style/CalculatorButtonStyle"/>
+
+        <Button
+            android:text="@string/zero"
+            grid:layout_row="4"
+            grid:layout_column="1"
+            grid:layout_rowWeight="1"
+            grid:layout_columnWeight="1"
+            android:onClick="append0"
+            style="@style/CalculatorButtonStyle"/>
+
+        <Button
+            android:text="@string/dot"
+            grid:layout_row="4"
+            grid:layout_column="2"
+            grid:layout_rowWeight="1"
+            grid:layout_columnWeight="1"
+            android:onClick="appendDot"
+            style="@style/CalculatorButtonStyle"/>
+
+        <Button
+            android:text="@string/equal_sign"
+            grid:layout_row="4"
+            grid:layout_column="3"
+            grid:layout_rowWeight="1"
+            grid:layout_columnWeight="1"
+            style="@style/CalculatorButtonStyle"
+            android:onClick="calculateExpression"
+            android:background="@android:color/holo_orange_light"/>
+
+    </android.support.v7.widget.GridLayout>
+
+</LinearLayout>
+

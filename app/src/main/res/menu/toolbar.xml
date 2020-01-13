@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- Microphone button -->
+    <item
+        android:id="@+id/toolbar__start_recording_button"
+        android:title="@string/microphone"
+        android:icon="@drawable/microphone_icon"
+        app:showAsAction="ifRoom">
+    </item>
+
+    <!-- History button -->
+    <item
+        android:id="@+id/toolbar__show_history_button"
+        android:title="@string/history"
+        android:icon="@drawable/history_icon"
+        app:showAsAction="ifRoom">
+    </item>
+
+    <!-- Settings button -->
+    <item
+        android:id="@+id/toolbar__show_settings_button"
+        android:title="@string/settings"
+        android:icon="@drawable/settings_icon"
+        app:showAsAction="ifRoom">
+    </item>
+
+
+</menu>

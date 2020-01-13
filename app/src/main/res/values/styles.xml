@@ -1,0 +1,53 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!-- Calculator expression and result fields styles -->
+    <style name="ExpressionFieldTextStyle" parent="@android:style/TextAppearance">
+        <item name="android:textSize">48sp</item>
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+    </style>
+
+    <style name="AuxiliaryFieldTextStyle" parent="@android:style/TextAppearance">
+        <item name="android:textSize">32sp</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+    </style>
+
+
+    <!-- Calculator buttons style -->
+    <style name="CalculatorButtonStyle" parent="Widget.AppCompat.Button.Borderless">
+        <item name="android:textSize">22sp</item>
+        <item name="android:layout_margin">1dp</item>
+        <item name="android:background">#F5F5F5</item>
+    </style>
+
+
+    <!-- History list texts styles -->
+    <style name="ListDateTextStyle" parent="@android:style/TextAppearance">
+        <item name="android:textSize">17sp</item>
+        <item name="android:textStyle">italic</item>
+    </style>
+
+    <style name="ListTimeTextStyle" parent="@android:style/TextAppearance">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">italic</item>
+    </style>
+
+    <style name="ListExpressionTextStyle" parent="@android:style/TextAppearance">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+    </style>
+
+    <style name="ListResultTextStyle" parent="@android:style/TextAppearance">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+    </style>
+
+
+</resources>
